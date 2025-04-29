@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Установите URL вашего сайта в продакшене
-  url: 'https://github.com/Dionis404/',
+  url: 'https://dionis404.github.io',
   // Установите путь /<baseUrl>/ под которым будет обслуживаться ваш сайт
   // Для деплоя на GitHub Pages это обычно '/<projectName>/'
   baseUrl: '/Goblin-Guide/',
