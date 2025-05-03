@@ -22,7 +22,7 @@
   --ifm-footer-color: #fff;
   --ifm-footer-link-color: #fff;
   --ifm-footer-link-hover-color: #f0e6d2;
-  --ifm-font-family-base: 'Press Start 2P' ;
+  --ifm-font-family-base: 'Press Start 2P', cursive;
   --ifm-heading-font-family: 'Press Start 2P', cursive;
   --ifm-font-size-base: 0.9rem;
   --ifm-line-height-base: 1.6;

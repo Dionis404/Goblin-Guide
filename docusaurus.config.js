@@ -43,13 +43,13 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Пожалуйста, измените это на ваш репозиторий.
-          // Удалите это, чтобы убрать ссылки "редактировать эту страницу".
           editUrl:
             'https://github.com/Dionis404/Goblin-Guide',
-          routeBasePath: '/', // Serve the docs at the site's root
+          routeBasePath: '/',
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
         },
-        blog: false, // Disable the blog plugin
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -60,7 +60,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Замените на социальную карточку вашего проекта
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
         defaultMode: 'light',
@@ -79,6 +78,12 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Гайды',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'databaseSidebar',
+            position: 'left',
+            label: 'База данных',
           },
           {
             href: 'https://github.com/Dionis404/Goblin-Guide',
@@ -111,11 +116,7 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-      algolia: {
-        appId: 'YOUR_APP_ID',
-        apiKey: 'YOUR_API_KEY',
-        indexName: 'YOUR_INDEX_NAME',
-      },
+      
       // Кастомные цвета
       customCss: './src/css/custom.css',
     }),

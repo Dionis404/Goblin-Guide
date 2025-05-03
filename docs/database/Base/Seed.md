@@ -45,10 +45,3 @@ sidebar_position: 1
 | Celestine | 6:00:00 | Фрукты | <span style={{color: '#9C27B0'}}>Полнолуние</span> |
 | Lunara | 12:00:00 | Фрукты | <span style={{color: '#9C27B0'}}>Полнолуние</span> |
 | Duskberry | 24:00:00 | Фрукты | <span style={{color: '#9C27B0'}}>Полнолуние</span> |
-
-### Легенда цветов:
-- <span style={{color: '#4CAF50'}}>Весна</span>
-- <span style={{color: '#f8ff30'}}>Лето</span>
-- <span style={{color: '#FF9800'}}>Осень</span>
-- <span style={{color: '#2196F3'}}>Зима</span>
-- <span style={{color: '#9C27B0'}}>Полнолуние</span>
