@@ -1,0 +1,69 @@
+/* Pixel Border Component Styles with Images */
+.pixel-border {
+  position: relative;
+  padding: 2rem;
+  margin: 1rem 0;
+  background-color: #fff;
+}
+
+/* Top border */
+.pixel-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 16px;
+  background-image: url('/img/borders/top-border.png');
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+
+/* Bottom border */
+.pixel-border::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 16px;
+  background-image: url('/img/borders/bottom-border.png');
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+
+/* Left border */
+.pixel-border .left-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 16px;
+  background-image: url('/img/borders/left-border.png');
+  background-repeat: repeat-y;
+  background-size: contain;
+}
+
+/* Right border */
+.pixel-border .right-border {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 16px;
+  background-image: url('/img/borders/right-border.png');
+  background-repeat: repeat-y;
+  background-size: contain;
+}
+
+/* Content wrapper */
+.pixel-border .content {
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+}
+
+/* Dark mode styles */
+[data-theme='dark'] .pixel-border {
+  background-color: var(--ifm-background-color);
+} 
