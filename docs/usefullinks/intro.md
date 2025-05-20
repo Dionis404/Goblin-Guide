@@ -1,6 +1,6 @@
 ---
-id: lifehack  
-title: Лайфхаки
+id: intro  
+title: Полезные ссылки
 sidebar_position: 2
 ---
 ### Раздел в разработке

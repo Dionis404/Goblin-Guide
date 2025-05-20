@@ -86,6 +86,12 @@ const config = {
             label: 'База данных',
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'usefullinksSidebar',
+            position: 'left',
+            label: 'Полезные ссылки',
+          },
+          {
             href: 'https://github.com/Dionis404/Goblin-Guide',
             label: 'GitHub',
             position: 'right',
@@ -95,22 +101,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Сообщество',
-            items: [
-              {
-                label: 'Discord',
-                href: 'https://discord.gg/sunflowerland',
-              },
-              {
-                label: 'Telegram',
-                href: 'https://t.me/sunflowerland',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Goblin Guide. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Goblin Guide. Построен с помощью Докусавра.`,
       },
       prism: {
         theme: prismThemes.github,

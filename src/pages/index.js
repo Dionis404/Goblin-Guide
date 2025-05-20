@@ -7,36 +7,34 @@ export default function Home() {
     <Layout
       title="Добро пожаловать"
       description="Официальное руководство по Sunflower Land">
-      <main className="container margin-vert--lg">
+      <main className="container margin-vert--lg backgroundmain">
         <div className="row">
           <div className="col col--8 col--offset-2">
-            <h1>Добро пожаловать в Sunflower Land Guide</h1>
+            <h2>Добро пожаловать в Гоблинский путеводитель</h2>
             <p>
-              Добро пожаловать в официальное руководство по Sunflower Land! Это руководство поможет вам освоиться в игре и стать успешным фермером.
+              Это база знаний гайдов по игре Sunflower Land
             </p>
 
-            <h2>Что такое Sunflower Land?</h2>
-            <p>Sunflower Land - это фермерская игра, где вы можете:</p>
-            <ul>
-              <li>Выращивать урожай и собирать ресурсы</li>
-              <li>Строить и улучшать свою ферму</li>
-              <li>Торговать с другими игроками</li>
-              <li>Выполнять квесты и получать награды</li>
-              <li>Собирать уникальные NFT</li>
-            </ul>
+            <h2>Многое находится в разработке. Если у вас есть желание помочь, вы можете внести изменения на GitHub или связаться со мной.</h2>
 
             <h2>Как пользоваться этим руководством</h2>
             <p>Руководство разделено на несколько разделов:</p>
-            <ul>
-              <li><Link to="/guides/intro">Гайды</Link> - базовые механики игры и первые шаги</li>
-              <li><Link to="/database/intro">База данных</Link> - подробная информация о всех элементах игры</li>
-            </ul>
-
-            <div className="margin-top--lg">
+            
+            <div className="margin-top--lg text--center">
+              <Link
+                className="button button--primary button--lg margin-right--md"
+                to="/guides/intro">
+                Гайды
+              </Link>
               <Link
                 className="button button--primary button--lg"
-                to="/guides/intro">
-                Начать обучение →
+                to="/database/intro">
+                База данных
+              </Link>
+              <Link
+                className="button button--primary button--lg"
+                to="/usefullinks/intro">
+                Полезные ссылки
               </Link>
             </div>
           </div>
@@ -44,4 +42,4 @@ export default function Home() {
       </main>
     </Layout>
   );
-} 
+}
