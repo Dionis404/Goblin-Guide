@@ -7,9 +7,9 @@
 /* You can override the default Infima variables here. */
 :root {
   /* Основной цвет - Используется для основных элементов темы, кнопок и интерактивных компонентов */
-  --ifm-color-primary: #c28569;
+  --ifm-color-primary: #5c473f;
   /* Темный оттенок основного - Используется для состояний наведения и активных элементов */
-  --ifm-color-primary-dark: #e4a672;
+  --ifm-color-primary-dark: #8b5c34;
   /* Еще более темный оттенок - Используется для нажатых состояний */
   --ifm-color-primary-darker: #00f514;
   /* Самый темный оттенок - Используется для отключенных состояний */
@@ -25,9 +25,9 @@
   /* Цвет текста для заголовков */
   --ifm-heading-color: #252525;
   /* Цвет текста для ссылок */
-  --ifm-link-color: #c28569;
+  --ifm-link-color: #ce4813;
   /* Цвет текста для ссылок при наведении */
-  --ifm-link-hover-color: #e4a672;
+  --ifm-link-hover-color: #ad703e;
   /* Размер шрифта для блоков кода */
   --ifm-code-font-size: 95%;
   /* Цвет фона для выделенных строк кода */
@@ -65,14 +65,14 @@
   --ifm-color-primary-light: #994d15;
   --ifm-color-primary-lighter: #a05016;
   --ifm-color-primary-lightest: #b55a19;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --ifm-background-color: #1a1a1a;
+  --ifm-background-color: #8b4513;
   --ifm-navbar-background-color: #8b4513;
   --ifm-navbar-link-color: #fff;
   --ifm-footer-background-color: #8b4513;
   --ifm-footer-color: #fff;
   --ifm-footer-link-color: #fff;
   --ifm-footer-link-hover-color: #f0e6d2;
+  --ifm-background-color: #c28569
 }
 
 /* Pixel art font */
@@ -102,7 +102,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(209, 50, 50, 0.3);
   z-index: 1;
 }
 
