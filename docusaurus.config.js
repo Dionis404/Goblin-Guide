@@ -107,7 +107,11 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-      
+      breadcrumbs: {
+        home: {
+          label: 'Главная'
+        }
+      },
       // Кастомные цвета
       customCss: './src/css/custom.css',
     }),

@@ -47,9 +47,9 @@
   /* Цвет ссылок в подвале при наведении */
   --ifm-footer-link-hover-color: #f0e6d2;
   /* Основной шрифт сайта */
-  --ifm-font-family-base: 'Press Start 2P', cursive;
+  --ifm-font-family-base: 'Comic Neue', cursive;
   /* Шрифт для заголовков */
-  --ifm-heading-font-family: 'Press Start 2P', cursive;
+  --ifm-heading-font-family: 'Comic Neue', cursive;
   /* Базовый размер шрифта */
   --ifm-font-size-base: 0.9rem;
   /* Базовая высота строки */
@@ -74,6 +74,9 @@
   --ifm-footer-link-hover-color: #f0e6d2;
   --ifm-background-color: #c28569
 }
+
+/* Импорт нового шрифта Comic Neue */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
 
 /* Pixel art font */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
@@ -120,7 +123,7 @@
 }
 
 .hero__title {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Comic Neue', cursive;
   font-size: 2.5rem;
   color: var(--ifm-color-primary);
   text-shadow: 3px 3px 0 #000;
@@ -131,7 +134,7 @@
 }
 
 .hero__subtitle {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Comic Neue', cursive;
   font-size: 1rem;
   color: #333;
   margin-bottom: 2rem;
@@ -146,8 +149,9 @@
   margin-top: 2rem;
 }
 
-.button {
-  font-family: 'Press Start 2P', cursive;
+.button,
+.breadcrumbs__link {
+  font-family: 'Comic Neue', cursive;
   font-size: 1rem;
 
   border-width: 6px;
@@ -169,11 +173,16 @@
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
-  width: 300px;
+  width: auto;
   text-align: center;
 }
 
-
+.button:hover,
+.breadcrumbs__link:hover,
+.button:focus {
+  background-color: #ead4aa !important;
+  /* ...оставляем рамку и другие стили без изменений */
+}
 
 .button::after {
   content: '';
@@ -321,14 +330,14 @@
 }
 
 .feature__title {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Comic Neue', cursive;
   font-size: 1.5rem;
   color: var(--ifm-color-primary);
   margin-bottom: 1rem;
 }
 
 .feature__description {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Comic Neue', cursive;
   font-size: 0.8rem;
   color: #333;
 }
@@ -341,7 +350,7 @@
 }
 
 .footer__title {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Comic Neue', cursive;
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
@@ -364,7 +373,7 @@
 .markdown h4,
 .markdown h5,
 .markdown h6 {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Comic Neue', cursive;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 2rem;
@@ -408,7 +417,219 @@
 
 /* Стили для кода */
 .markdown code {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Comic Neue', cursive;
+  font-size: 0.8rem;
+  background-color: var(--ifm-color-primary-lightest);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+/* Стили для блоков кода */
+.markdown pre {
+  background-color: var(--ifm-color-primary-darkest);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.markdown pre code {
+  background-color: transparent;
+  padding: 0;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+/* Стили для таблиц */
+.markdown table {
+  font-size: 0.8rem;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.markdown table th {
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.markdown table td {
+  padding: 0.5rem;
+  border: 1px solid var(--ifm-color-primary-light);
+}
+
+/* Стили для цитат */
+.markdown blockquote {
+  border-left: 4px solid var(--ifm-color-primary);
+  padding-left: 1rem;
+  font-style: italic;
+  color: var(--ifm-color-primary-dark);
+  margin: 1.5rem 0;
+}
+
+/* Стили для ссылок */
+.markdown a {
+  color: var(--ifm-link-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.markdown a:hover {
+  color: var(--ifm-link-hover-color);
+  text-decoration: underline;
+}
+
+/* Оставляем только кастомные рамки и сброс дефолтной правой границы sidebar-контейнера */
+div[class*="docSidebarContainer"] {
+  border-right: none !important;
+}
+
+.menu {
+  background-color: #e4a672;
+  border-width: 8px;
+  border-style: solid;
+  border-image: url('/img/borders/dark_border.png') 20% / 1 / 0 stretch;
+  image-rendering: pixelated;
+  position: relative;
+  margin: 1rem;
+}
+
+/* Стили для боковой панели */
+.menu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--ifm-color-primary),
+    var(--ifm-color-primary) 10px,
+    var(--ifm-color-primary-dark) 10px,
+    var(--ifm-color-primary-dark) 20px
+  );
+  z-index: -1;
+}
+
+/* Стили для навигационной панели */
+.navbar {
+  border-width: 8px;
+  border-style: solid;
+  border-image: url('/img/borders/dark_border.png') 20% / 1 / 1 stretch;
+  image-rendering: pixelated;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для футера */
+.footer {
+  border-width: 8px;
+  border-style: solid;
+  border-image: url('/img/borders/dark_border.png') 20% / 1 / 1 stretch;
+  image-rendering: pixelated;
+  box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Features section */
+.features {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-color);
+}
+
+.feature {
+  text-align: center;
+  padding: 2rem;
+}
+
+.feature__title {
+  font-family: 'Comic Neue', cursive;
+  font-size: 1.5rem;
+  color: var(--ifm-color-primary);
+  margin-bottom: 1rem;
+}
+
+.feature__description {
+  font-family: 'Comic Neue', cursive;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.footer__title {
+  font-family: 'Comic Neue', cursive;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer__link {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer__link:hover {
+  color: #f0e6d2;
+  text-decoration: none;
+}
+
+/* Стили для заголовков в MD файлах */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  font-family: 'Comic Neue', cursive;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-font-color-base);
+}
+
+.markdown h1 {
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 0 var(--ifm-color-primary);
+}
+
+.markdown h2 {
+  font-size: 1.5rem;
+  color: var(--ifm-font-color-base);
+}
+
+.markdown h3 {
+  font-size: 1.2rem;
+}
+
+/* Стили для текста в MD файлах */
+.markdown p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-font-color-base);
+}
+
+/* Стили для списков */
+.markdown ul,
+.markdown ol {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.markdown li {
+  margin-bottom: 0.5rem;
+}
+
+/* Стили для кода */
+.markdown code {
+  font-family: 'Comic Neue', cursive;
   font-size: 0.8rem;
   background-color: var(--ifm-color-primary-lightest);
   padding: 0.2rem 0.4rem;
@@ -538,9 +759,8 @@ div[class*="sidebar"] {
 }
 /* Стили для ссылок в breadcrumbs */
 .breadcrumbs__link {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Comic Neue', cursive;
   font-size: 0.9rem;
-  color: var(--ifm-color-primary);
   text-decoration: none;
   transition: all 0.3s ease;
   border-width: 5px;
@@ -554,6 +774,7 @@ div[class*="sidebar"] {
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
+  box-shadow: none !important;
 }
 
 /* Анимация при наведении */
@@ -561,30 +782,27 @@ div[class*="sidebar"] {
   color: var(--ifm-link-hover-color);
   text-decoration: underline;
 }
+  
 
-/* Эффект свечения */
-.breadcrumbs__link::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    transparent
-  );
-  transform: rotate(45deg);
-  animation: shine 3s infinite;
-}
 /* Стили для разделителя breadcrumbs */
 .breadcrumbs__separator {
-  font-size: 7.2rem;
-  color: var(--ifm-color-primary-dark);
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  content: '';
+  font-size: 0;
   margin: 0 0.5rem;
 }
+
+/* Если нет svg, можно временно использовать ▸ */
+.breadcrumbs__separator:empty::after {
+  content: '▸';
+  font-size: 1.2rem;
+  color: #5c473f;
+  vertical-align: middle;
+}
+
 /* Общий стиль для breadcrumbs */
 .breadcrumbs {
   display: flex;
@@ -592,6 +810,21 @@ div[class*="sidebar"] {
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
+
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  background-color: #ead4aa !important;
+  color: #333 !important;
+  filter: none !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
+}
+
+.breadcrumbs__item--active .breadcrumbs__link:hover {
+  background-color: #ead4aa !important;
+  color: #333 !important;
+}
+
 @media (pointer: fine) {
   .thin-scrollbar {
       scrollbar-width: none;
@@ -599,11 +832,61 @@ div[class*="sidebar"] {
 }
 
 .backgroundmain {
-  background-image: url('/img/background.png');
+  min-height: 100vh;
+  width: 100vw;
+  background: url('/img/background.png') repeat;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content {
+  width: 100vw;
   min-height: 100vh;
-  background-attachment: fixed;
-  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered-content {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(255,255,255,0.01); /* прозрачность для читаемости, можно убрать */
+  border-radius: 12px;
+  padding: 24px 16px;
+}
+
+.button-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 32px;
+}
+
+.button-column .button {
+  min-width: 220px;
+  max-width: 320px;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .centered-content {
+    max-width: 98vw;
+    padding: 12px 2vw;
+  }
+  .button-column .button {
+    min-width: 80vw;
+    max-width: 98vw;
+    font-size: 1rem;
+  }
+}
+
+h2, p {
+  text-align: center;
 }
