@@ -15,10 +15,10 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Установите URL вашего сайта в продакшене
-  url: 'https://dionis404.github.io',
+  url: 'http://docs.sunflowerland.ru/',
   // Установите путь /<baseUrl>/ под которым будет обслуживаться ваш сайт
   // Для деплоя на GitHub Pages это обычно '/<projectName>/'
-  baseUrl: '/Goblin-Guide/',
+  baseUrl: '/',
 
   // Конфигурация деплоя на GitHub Pages.
   // Если вы не используете GitHub Pages, эти настройки не нужны.
