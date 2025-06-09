@@ -47,9 +47,9 @@
   /* Цвет ссылок в подвале при наведении */
   --ifm-footer-link-hover-color: #f0e6d2;
   /* Основной шрифт сайта */
-  --ifm-font-family-base: 'Comic Neue', cursive;
+  --ifm-font-family-base: 'Inter', cursive;
   /* Шрифт для заголовков */
-  --ifm-heading-font-family: 'Comic Neue', cursive;
+  --ifm-heading-font-family: 'Inter', cursive;
   /* Базовый размер шрифта */
   --ifm-font-size-base: 0.9rem;
   /* Базовая высота строки */
@@ -75,11 +75,10 @@
   --ifm-background-color: #c28569
 }
 
-/* Импорт нового шрифта Comic Neue */
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+/* Импорт шрифта  */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
-/* Pixel art font */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 
 /* Custom styles for Sunflower Land theme */
 .hero {
@@ -123,10 +122,9 @@
 }
 
 .hero__title {
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Interr', cursive;
   font-size: 2.5rem;
   color: var(--ifm-color-primary);
-  text-shadow: 3px 3px 0 #000;
   margin-bottom: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -134,7 +132,7 @@
 }
 
 .hero__subtitle {
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Interr', cursive;
   font-size: 1rem;
   color: #333;
   margin-bottom: 2rem;
@@ -149,18 +147,19 @@
   margin-top: 2rem;
 }
 
+/* Стили для кнопок и breadcrumbs */
 .button,
 .breadcrumbs__link {
-  font-family: 'Comic Neue', cursive;
-  font-size: 1rem;
-
+  font-family: 'Interr', cursive;
+  font-size: clamp(0.8rem, 3vw, 1.2rem);
+  font-weight: 700;
   border-width: 6px;
   border-style: solid;
   border-image: url('/img/borders/light_button.png') 40% / 3 / 1 stretch;
   image-rendering: pixelated;
   border-radius: 25px;
   background-color: #ead4aa;
-  color: #fff;
+  color: #333333;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -168,13 +167,13 @@
   gap: 0.5rem;
   margin: 0 1rem;
   transition: all 0.3s ease;
-  text-shadow: 2px 2px 0 #000;
   letter-spacing: 1px;
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
   width: auto;
   text-align: center;
+
 }
 
 .button:hover,
@@ -201,6 +200,7 @@
   animation: shine 3s infinite;
 }
 
+/* Анимации */
 @keyframes glow {
   from {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--ifm-color-primary);
@@ -241,7 +241,7 @@
   position: relative;
 }
 
-/* Стили для контента */
+/* Стили для markdown контента */
 .markdown {
   background-color: #e4a672;
   padding: 2rem;
@@ -252,118 +252,16 @@
   border-radius: 20px;
   position: relative;
   margin: 2rem 0;
+  text-align: left;
 }
 
-.markdown::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  left: -8px;
-  right: -8px;
-  bottom: -8px;
-  background: repeating-linear-gradient(
-    45deg,
-    var(--ifm-color-primary),
-    var(--ifm-color-primary) 10px,
-    var(--ifm-color-primary-dark) 10px,
-    var(--ifm-color-primary-dark) 20px
-  );
-  z-index: -1;
+/* Переопределяем выравнивание для всех элементов внутри markdown */
+.markdown * {
+  text-align: left;
 }
 
-/* Стили для боковой панели */
-.menu {
-  background-color: #e4a672;
-  border-width: 8px;
-  border-style: solid;
-  border-image: url('/img/borders/dark_border.png') 20% / 1 / 0 stretch;
-  image-rendering: pixelated;
-  border-radius: 25px;
-  position: relative;
-  margin: 1rem;
-}
-
-.menu::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  left: -8px;
-  right: -8px;
-  bottom: -8px;
-  background: repeating-linear-gradient(
-    45deg,
-    var(--ifm-color-primary),
-    var(--ifm-color-primary) 10px,
-    var(--ifm-color-primary-dark) 10px,
-    var(--ifm-color-primary-dark) 20px
-  );
-  z-index: -1;
-}
-
-/* Стили для навигационной панели */
-.navbar {
-  border-width: 8px;
-  border-style: solid;
-  border-image: url('/img/borders/dark_border.png') 20% / 1 / 1 stretch;
-  image-rendering: pixelated;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
-}
-
-/* Стили для футера */
-.footer {
-  border-width: 8px;
-  border-style: solid;
-  border-image: url('/img/borders/dark_border.png') 20% / 1 / 1 stretch;
-  image-rendering: pixelated;
-  box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.1);
-}
-
-/* Features section */
-.features {
-  padding: 4rem 0;
-  background-color: var(--ifm-background-color);
-}
-
-.feature {
-  text-align: center;
-  padding: 2rem;
-}
-
-.feature__title {
-  font-family: 'Comic Neue', cursive;
-  font-size: 1.5rem;
-  color: var(--ifm-color-primary);
-  margin-bottom: 1rem;
-}
-
-.feature__description {
-  font-family: 'Comic Neue', cursive;
-  font-size: 0.8rem;
-  color: #333;
-}
-
-/* Footer */
-.footer {
-  background-color: var(--ifm-color-primary);
-  color: #fff;
-  padding: 2rem 0;
-}
-
-.footer__title {
-  font-family: 'Comic Neue', cursive;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.footer__link {
-  color: #fff;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.footer__link:hover {
-  color: #f0e6d2;
-  text-decoration: none;
+h2, p {
+  text-align: left;
 }
 
 /* Стили для заголовков в MD файлах */
@@ -373,40 +271,30 @@
 .markdown h4,
 .markdown h5,
 .markdown h6 {
-  font-family: 'Comic Neue', cursive;
-  text-transform: uppercase;
+  font-family: 'Interr', cursive;
   letter-spacing: 1px;
   margin-top: 2rem;
   margin-bottom: 1rem;
   color: var(--ifm-font-color-base);
 }
 
-.markdown h1 {
-  font-size: 1.8rem;
-  text-shadow: 2px 2px 0 var(--ifm-color-primary);
-}
-
-.markdown h2 {
-  font-size: 1.5rem;
-  color: var(--ifm-font-color-base);
-}
-
-.markdown h3 {
-  font-size: 1.2rem;
-}
+.markdown h1 { font-size: 1.8rem; }
+.markdown h2 { font-size: 1.5rem; }
+.markdown h3 { font-size: 1.2rem; }
 
 /* Стили для текста в MD файлах */
 .markdown p {
-  font-size: 0.9rem;
+  font-size: 20px;
   line-height: 1.8;
   margin-bottom: 1.5rem;
   color: var(--ifm-font-color-base);
+  text-align: left;
 }
 
 /* Стили для списков */
 .markdown ul,
 .markdown ol {
-  font-size: 0.9rem;
+  font-size: 18px;
   margin-bottom: 1.5rem;
   padding-left: 1.5rem;
 }
@@ -417,7 +305,7 @@
 
 /* Стили для кода */
 .markdown code {
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Interr';
   font-size: 0.8rem;
   background-color: var(--ifm-color-primary-lightest);
   padding: 0.2rem 0.4rem;
@@ -442,20 +330,25 @@
 .markdown table {
   font-size: 0.8rem;
   border-collapse: collapse;
-  width: 100%;
+  width: auto;
   margin-bottom: 1.5rem;
 }
 
 .markdown table th {
   background-color: var(--ifm-color-primary);
-  color: #fff;
+  color: #000000;
   padding: 0.5rem;
   text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
 }
 
 .markdown table td {
   padding: 0.5rem;
   border: 1px solid var(--ifm-color-primary-light);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
 }
 
 /* Стили для цитат */
@@ -479,11 +372,7 @@
   text-decoration: underline;
 }
 
-/* Оставляем только кастомные рамки и сброс дефолтной правой границы sidebar-контейнера */
-div[class*="docSidebarContainer"] {
-  border-right: none !important;
-}
-
+/* Стили для боковой панели */
 .menu {
   background-color: #e4a672;
   border-width: 8px;
@@ -494,7 +383,6 @@ div[class*="docSidebarContainer"] {
   margin: 1rem;
 }
 
-/* Стили для боковой панели */
 .menu::before {
   content: '';
   position: absolute;
@@ -512,7 +400,7 @@ div[class*="docSidebarContainer"] {
   z-index: -1;
 }
 
-/* Стили для навигационной панели */
+/* Стили для навигации */
 .navbar {
   border-width: 8px;
   border-style: solid;
@@ -520,9 +408,15 @@ div[class*="docSidebarContainer"] {
   image-rendering: pixelated;
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
 }
+div[class*="docSidebarContainer"] {
+  border-right: none !important;
+}
 
 /* Стили для футера */
 .footer {
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+  padding: 2rem 0;
   border-width: 8px;
   border-style: solid;
   border-image: url('/img/borders/dark_border.png') 20% / 1 / 1 stretch;
@@ -530,39 +424,8 @@ div[class*="docSidebarContainer"] {
   box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* Features section */
-.features {
-  padding: 4rem 0;
-  background-color: var(--ifm-background-color);
-}
-
-.feature {
-  text-align: center;
-  padding: 2rem;
-}
-
-.feature__title {
-  font-family: 'Comic Neue', cursive;
-  font-size: 1.5rem;
-  color: var(--ifm-color-primary);
-  margin-bottom: 1rem;
-}
-
-.feature__description {
-  font-family: 'Comic Neue', cursive;
-  font-size: 0.8rem;
-  color: #333;
-}
-
-/* Footer */
-.footer {
-  background-color: var(--ifm-color-primary);
-  color: #fff;
-  padding: 2rem 0;
-}
-
 .footer__title {
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Interr', cursive;
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
@@ -578,213 +441,38 @@ div[class*="docSidebarContainer"] {
   text-decoration: none;
 }
 
-/* Стили для заголовков в MD файлах */
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6 {
-  font-family: 'Comic Neue', cursive;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: var(--ifm-font-color-base);
+/* Features section */
+.features {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-color);
 }
 
-.markdown h1 {
-  font-size: 1.8rem;
-  text-shadow: 2px 2px 0 var(--ifm-color-primary);
+.feature {
+  text-align: center;
+  padding: 2rem;
 }
 
-.markdown h2 {
+.feature__title {
+  font-family: 'Interr', cursive;
   font-size: 1.5rem;
-  color: var(--ifm-font-color-base);
+  color: var(--ifm-color-primary);
+  margin-bottom: 1rem;
 }
 
-.markdown h3 {
-  font-size: 1.2rem;
-}
-
-/* Стили для текста в MD файлах */
-.markdown p {
-  font-size: 0.9rem;
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-  color: var(--ifm-font-color-base);
-}
-
-/* Стили для списков */
-.markdown ul,
-.markdown ol {
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
-  padding-left: 1.5rem;
-}
-
-.markdown li {
-  margin-bottom: 0.5rem;
-}
-
-/* Стили для кода */
-.markdown code {
-  font-family: 'Comic Neue', cursive;
+.feature__description {
+  font-family: 'Interr', cursive;
   font-size: 0.8rem;
-  background-color: var(--ifm-color-primary-lightest);
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
+  color: #333;
 }
 
-/* Стили для блоков кода */
-.markdown pre {
-  background-color: var(--ifm-color-primary-darkest);
-  border-radius: 8px;
-  padding: 1rem;
+/* Стили для breadcrumbs */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.markdown pre code {
-  background-color: transparent;
-  padding: 0;
-  font-size: 0.8rem;
-  color: #fff;
-}
-
-/* Стили для таблиц */
-.markdown table {
-  font-size: 0.8rem;
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 1.5rem;
-}
-
-.markdown table th {
-  background-color: var(--ifm-color-primary);
-  color: #fff;
-  padding: 0.5rem;
-  text-align: left;
-}
-
-.markdown table td {
-  padding: 0.5rem;
-  border: 1px solid var(--ifm-color-primary-light);
-}
-
-/* Стили для цитат */
-.markdown blockquote {
-  border-left: 4px solid var(--ifm-color-primary);
-  padding-left: 1rem;
-  font-style: italic;
-  color: var(--ifm-color-primary-dark);
-  margin: 1.5rem 0;
-}
-
-/* Стили для ссылок */
-.markdown a {
-  color: var(--ifm-link-color);
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.markdown a:hover {
-  color: var(--ifm-link-hover-color);
-  text-decoration: underline;
-}
-
-/* Оставляем только кастомные рамки и сброс дефолтной правой границы sidebar-контейнера */
-div[class*="docSidebarContainer"] {
-  border-right: none !important;
-}
-
-.menu {
-  background-color: #e4a672;
-  border-width: 8px;
-  border-style: solid;
-  border-image: url('/img/borders/dark_border.png') 20% / 1 / 0 stretch;
-  image-rendering: pixelated;
-  position: relative;
-  margin: 1rem;
-}
-
-/* Стили для боковой панели */
-.menu::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  left: -8px;
-  right: -8px;
-  bottom: -8px;
-  background: repeating-linear-gradient(
-    45deg,
-    var(--ifm-color-primary),
-    var(--ifm-color-primary) 10px,
-    var(--ifm-color-primary-dark) 10px,
-    var(--ifm-color-primary-dark) 20px
-  );
-  z-index: -1;
-}
-
-/* Стили для навигационной панели */
-.navbar {
-  border-width: 8px;
-  border-style: solid;
-  border-image: url('/img/borders/dark_border.png') 20% / 1 / 1 stretch;
-  image-rendering: pixelated;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
-}
-
-/* Стили для футера */
-.footer {
-  border-width: 8px;
-  border-style: solid;
-  border-image: url('/img/borders/dark_border.png') 20% / 1 / 1 stretch;
-  image-rendering: pixelated;
-  box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.1);
-}
-
-/* Убираем фиксированную высоту у всех sidebar */
-nav[class*="sidebar"] {
-  height: auto !important;
-}
-
-/* Сброс высоты у всех контейнеров sidebar */
-div[class*="sidebar"] {
-  height: auto !important;
-  min-height: 0 !important;
-  max-height: none !important;
-}
-
-.docSidebarContainer_YfHR {
-  border-right: none !important;
-}
-/* Стили для ссылок в breadcrumbs */
-.breadcrumbs__link {
-  font-family: 'Comic Neue', cursive;
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border-width: 5px;
-  border-style: solid;
-  border-image: url('/img/borders/light_button.png') 40% / 3 / 1 stretch;
-  image-rendering: pixelated;
-  border-radius: 25px;
-  background-color: #ead4aa;
-  text-shadow: 2px 2px 0 #000;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  position: relative;
-  overflow: hidden;
-  box-shadow: none !important;
-}
-
-/* Анимация при наведении */
-.breadcrumbs__link:hover {
-  color: var(--ifm-link-hover-color);
-  text-decoration: underline;
-}
-  
-
-/* Стили для разделителя breadcrumbs */
 .breadcrumbs__separator {
   display: inline-block;
   width: 18px;
@@ -795,22 +483,12 @@ div[class*="sidebar"] {
   margin: 0 0.5rem;
 }
 
-/* Если нет svg, можно временно использовать ▸ */
 .breadcrumbs__separator:empty::after {
   content: '▸';
   font-size: 1.2rem;
   color: #5c473f;
   vertical-align: middle;
 }
-
-/* Общий стиль для breadcrumbs */
-.breadcrumbs {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
 
 .breadcrumbs__item--active .breadcrumbs__link {
   background-color: #ead4aa !important;
@@ -820,17 +498,28 @@ div[class*="sidebar"] {
   box-shadow: none !important;
 }
 
-.breadcrumbs__item--active .breadcrumbs__link:hover {
-  background-color: #ead4aa !important;
-  color: #333 !important;
+/* Утилиты */
+div[class*="docSidebarContainer"] {
+  border-right: none !important;
+}
+
+nav[class*="sidebar"] {
+  height: auto !important;
+}
+
+div[class*="sidebar"] {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
 }
 
 @media (pointer: fine) {
   .thin-scrollbar {
-      scrollbar-width: none;
+    scrollbar-width: none;
   }
 }
 
+/* Стили для главной страницы */
 .backgroundmain {
   min-height: 100vh;
   width: 100vw;
@@ -855,7 +544,7 @@ div[class*="sidebar"] {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  background: rgba(255,255,255,0.01); /* прозрачность для читаемости, можно убрать */
+  background: rgba(255,255,255,0.01);
   border-radius: 12px;
   padding: 24px 16px;
 }
@@ -872,7 +561,8 @@ div[class*="sidebar"] {
   min-width: 220px;
   max-width: 320px;
   width: 100%;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 4vw, 1.3rem);
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
@@ -885,8 +575,4 @@ div[class*="sidebar"] {
     max-width: 98vw;
     font-size: 1rem;
   }
-}
-
-h2, p {
-  text-align: center;
 }

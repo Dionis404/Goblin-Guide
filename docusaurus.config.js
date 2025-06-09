@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Установите URL вашего сайта в продакшене
-  url: 'http://docs.sunflowerland.ru/',
+  url: 'https://sflguide.fun/',
   // Установите путь /<baseUrl>/ под которым будет обслуживаться ваш сайт
   // Для деплоя на GitHub Pages это обычно '/<projectName>/'
   baseUrl: '/',
