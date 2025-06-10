@@ -1,8 +1,11 @@
 ---
 id: coins  
-title: Монеты
+title: Монеты 
 sidebar_position: 2
 ---
-### Раздел в разработке
+
+# ![Монеты](/img/coins.png) Монеты
+
+### Раздел в разработке 
 
 ![В разработке](/img/pontoon.gif )

@@ -15,11 +15,11 @@
   /* Самый темный оттенок - Используется для отключенных состояний */
   --ifm-color-primary-darkest: #01fc72;
   /* Светлый оттенок основного - Используется для тонких выделений */
-  --ifm-color-primary-light: #0cebf3;
+  --ifm-color-primary-light: #c58c36;
   /* Еще более светлый оттенок - Используется для эффектов при наведении */
   --ifm-color-primary-lighter: #ead4aa;
   /* Цвет основного текста */
-  --ifm-font-color-base: #333030;
+  --ifm-font-color-base: #2b2b2b;
   /* Цвет текста в темной теме */
   --ifm-font-color-base-inverse: #ffffff;
   /* Цвет текста для заголовков */
@@ -51,7 +51,7 @@
   /* Шрифт для заголовков */
   --ifm-heading-font-family: 'Inter', cursive;
   /* Базовый размер шрифта */
-  --ifm-font-size-base: 0.9rem;
+  --ifm-font-size-base: 14px;
   /* Базовая высота строки */
   --ifm-line-height-base: 1.6;
 }
@@ -159,7 +159,7 @@
   image-rendering: pixelated;
   border-radius: 25px;
   background-color: #ead4aa;
-  color: #333333;
+  color: #000000;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -378,6 +378,7 @@ h2, p {
   border-width: 8px;
   border-style: solid;
   border-image: url('/img/borders/dark_border.png') 20% / 1 / 0 stretch;
+  border-radius: 25px;
   image-rendering: pixelated;
   position: relative;
   margin: 1rem;
@@ -398,6 +399,41 @@ h2, p {
     var(--ifm-color-primary-dark) 20px
   );
   z-index: -1;
+}
+
+/* Стили для элементов меню в сайдбаре */
+.menu__link {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ifm-font-color-base);
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.menu__link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--ifm-color-primary-dark);
+}
+
+.menu__link--active {
+  font-weight: 700;
+  color: var(--ifm-color-primary-dark);
+}
+
+/* Стили для категорий в сайдбаре */
+.menu__list-item-collapsible {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+}
+
+/* Отступы для вложенных элементов */
+.menu__list .menu__list {
+  margin-left: 1rem;
+  border-left: 2px solid var(--ifm-color-primary-light);
+  padding-left: 0.5rem;
 }
 
 /* Стили для навигации */
