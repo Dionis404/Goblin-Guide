@@ -1,6 +1,6 @@
 ---
 id: eggplant  
-title:  
+title: Баклажаны за секунду! 
 sidebar_position: 2
 ---
 
