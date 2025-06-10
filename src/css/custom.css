@@ -521,7 +521,7 @@ div[class*="sidebar"] {
 
 /* Стили для главной страницы */
 .backgroundmain {
-  min-height: 100vh;
+  
   width: 100vw;
   background: url('/img/background.png') repeat;
   background-size: cover;
